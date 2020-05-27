@@ -16,7 +16,8 @@ Download `Dataset_Test` and extract in "Data_processing"
 ```bash
 cd ACGPN_inference
 mkdir sample / test_img
-cd .. 
+# activate your python env
+pip install -r requirements.txt 
 python test.py
 ```
 **Dataset Partition** We present a criterion to introduce the difficulty of try-on for a certain reference image.
