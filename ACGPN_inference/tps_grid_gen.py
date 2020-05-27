@@ -5,6 +5,7 @@ import itertools
 import torch.nn as nn
 from torch.autograd import Function, Variable
 
+
 # phi(x1, x2) = r^2 * log(r), where r = ||x1 - x2||_2
 def compute_partial_repr(input_points, control_points):
     N = input_points.size(0)
@@ -19,6 +20,7 @@ def compute_partial_repr(input_points, control_points):
     mask = repr_matrix != repr_matrix
     repr_matrix.masked_fill_(mask, 0)
     return repr_matrix
+
 
 class TPSGridGen(nn.Module):
 

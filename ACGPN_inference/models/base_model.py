@@ -52,7 +52,7 @@ class BaseModel(torch.nn.Module):
         print (save_filename)
         if not save_dir:
             save_dir = self.save_dir
-        save_path = os.path.join(save_dir, save_filename)        
+        save_path = os.path.join(r"C:\Users\Grisha Zohrabyan\dev\MyDroom\DeepFashion_Try_On\ACGPN_inference\checkpoints", save_filename)
         if not os.path.isfile(save_path):
             print('%s not exists yet!' % save_path)
             if network_label == 'G':
@@ -60,7 +60,7 @@ class BaseModel(torch.nn.Module):
         else:
             #network.load_state_dict(torch.load(save_path))
 
-            network.load_state_dict(torch.load(save_path))
+            network.load_state_dict(torch.load(save_path, map_location='cpu'))
             # except:
             #     pretrained_dict = torch.load(save_path)
             #     model_dict = network.state_dict()
