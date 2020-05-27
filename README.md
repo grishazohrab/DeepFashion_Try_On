@@ -4,13 +4,19 @@ We rearrange the VITON dataset for easy access.
 
 [[Dataset Partition Label]](https://drive.google.com/open?id=1Jt9DykVUmUo5dzzwyi4C_1wmWgVYsFDl)  [[Sample Try-on Video]](https://www.youtube.com/watch?v=BbKBSfDBcxI) [[Checkpoints]](https://drive.google.com/file/d/1UWT6esQIU_d4tUm8cjxDKMhB8joQbrFx/view?usp=sharing) 
 
+Download `Checkpoints` and extract in "ACGPN_inference/checkpoints"  
+
 [[Dataset_Test]](https://drive.google.com/file/d/1tE7hcVFm8Td8kRh5iYRBSDFdvZIkbUIR/view?usp=sharing) [[Dataset_Train]](https://drive.google.com/file/d/1lHNujZIq6KVeGOOdwnOXVCSR5E7Kv6xv/view?usp=sharing)
 
+Download `Dataset_Test` and extract in "Data_processing" 
 
 [[Paper]](https://arxiv.org/abs/2003.05863)
 
 ## Inference
 ```bash
+cd ACGPN_inference
+mkdir sample / test_img
+cd .. 
 python test.py
 ```
 **Dataset Partition** We present a criterion to introduce the difficulty of try-on for a certain reference image.
